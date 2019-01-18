@@ -1,0 +1,5 @@
+sccs get main.c
+sccs get linkedlist.c
+sccs get record.h
+sccs get Makefile
+

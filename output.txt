@@ -1,0 +1,247 @@
+Script started on Sat 27 Oct 2018 11:36:49 PM HST
+]0;kobyv@uhx02:~/project1[?1034huhx02:/home/k/kobyv/project1% ls
+output.txt  [0m[38;5;27mSCCS[0m
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% sccs get getrelease
+get: warning: SCCS/s.getrelease: No id keywords.
+1.1
+5 lines
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% ls
+getrelease  output.txt  [0m[38;5;27mSCCS[0m
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% chmod 755 getrelease
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% ls
+[0m[38;5;34mgetrelease[0m  output.txt  [38;5;27mSCCS[0m
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% ./getrelease
+get: warning: SCCS/s.main.c: No id keywords.
+1.1
+172 lines
+get: warning: SCCS/s.linkedlist.c: No id keywords.
+1.1
+475 lines
+get: warning: SCCS/s.record.h: No id keywords.
+1.1
+7 lines
+get: warning: SCCS/s.Makefile: No id keywords.
+1.1
+7 lines
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% ls
+[0m[38;5;34mgetrelease[0m  linkedlist.c  main.c  Makefile  output.txt  record.h  [38;5;27mSCCS[0m
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% make
+gcc -ansi -pedantic-errors -Wall -c main.c
+[01m[Kmain.c:[m[K In function ‘[01m[Kmain[m[K’:
+[01m[Kmain.c:130:13:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%s[m[K’ expects argument of type ‘[01m[Kchar *[m[K’, but argument 2 has type ‘[01m[Kchar (*)[100][m[K’ [-Wformat=]
+             scanf("%s", &name);
+[01;32m[K             ^[m[K
+gcc -ansi -pedantic-errors -Wall -c linkedlist.c
+[01m[Klinkedlist.c:[m[K In function ‘[01m[KaddRecord[m[K’:
+[01m[Klinkedlist.c:40:23:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kmalloc[m[K’ [-Wimplicit-function-declaration]
+     newNode = (struct record *) malloc(sizeof(struct record));
+[01;32m[K                       ^[m[K
+[01m[Klinkedlist.c:40:33:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kmalloc[m[K’ [enabled by default]
+     newNode = (struct record *) malloc(sizeof(struct record));
+[01;32m[K                                 ^[m[K
+[01m[Klinkedlist.c:48:5:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kstrcpy[m[K’ [-Wimplicit-function-declaration]
+     strcpy(newNode -> name, nameInput);
+[01;32m[K     ^[m[K
+[01m[Klinkedlist.c:48:5:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kstrcpy[m[K’ [enabled by default]
+[01m[Klinkedlist.c:[m[K In function ‘[01m[KdeleteRecord[m[K’:
+[01m[Klinkedlist.c:197:13:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kfree[m[K’ [-Wimplicit-function-declaration]
+             free(temp);
+[01;32m[K             ^[m[K
+[01m[Klinkedlist.c:197:13:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kfree[m[K’ [enabled by default]
+[01m[Klinkedlist.c:[m[K In function ‘[01m[KgetAddress[m[K’:
+[01m[Klinkedlist.c:339:5:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kmemset[m[K’ [-Wimplicit-function-declaration]
+     memset(address, 0, 100);
+[01;32m[K     ^[m[K
+[01m[Klinkedlist.c:339:5:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kmemset[m[K’ [enabled by default]
+[01m[Klinkedlist.c:[m[K In function ‘[01m[KgetAddressFile[m[K’:
+[01m[Klinkedlist.c:404:5:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kmemset[m[K’ [enabled by default]
+     memset(address, 0, 100);
+[01;32m[K     ^[m[K
+[01m[Klinkedlist.c:[m[K In function ‘[01m[Kreadfile[m[K’:
+[01m[Klinkedlist.c:452:13:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint *[m[K’, but argument 3 has type ‘[01m[Kint[m[K’ [-Wformat=]
+             fscanf(fp, "%d", temp -> accountno); 
+[01;32m[K             ^[m[K
+[01m[Klinkedlist.c:465:13:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[Kstrcpy[m[K’ [enabled by default]
+             strcpy(temp -> address, get);
+[01;32m[K             ^[m[K
+gcc -o main main.o linkedlist.o
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% ls
+[0m[38;5;34mgetrelease[0m  linkedlist.c  linkedlist.o  [38;5;34mmain[0m  main.c  main.o  Makefile  output.txt  record.h  [38;5;27mSCCS[0m
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% ./make[K[Kin
+Welcome to the bank database
+ To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+ 1
+Please enter the account #
+1 2
+Please enter the name
+ko  jae ke
+Please enter the address, to finish typing address please type '*'
+450343 
+Doel  le st.*
+This persons account has been added: jake
+1
+Please enter the account #
+34
+Please enter the name
+mark
+Please enter the address, to finish typing address please type '*'
+d liincon*
+This persons account has been added: mark
+1
+Please enter the account #
+6
+Please enter the name
+anthony
+Please enter the address, to finish typing address please type '*'
+king
+university*
+This persons account has been added: anthony
+1
+Please enter the account #
+1
+Please enter the name
+david
+Please enter the address, to finish typing address please type '*'
+home*
+This persons account has been added: david
+3
+print all records
+Account #: 1
+Name: david
+Address: 
+home*
+ 
+Account #: 2
+Name: jake
+Address: 
+450343 
+Dole st.*
+ 
+Account #: 6
+Name: anthony
+Address: 
+king
+university*
+ 
+Account #: 34
+Name: mark
+Address: 
+liincon*
+ 
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+ 2
+Please enter the account no
+6
+Account #: 6
+Name: anthony
+Address: 
+king
+university*
+ 
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+ 4
+Please enter the account no
+6
+anthony's record has been removed
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+3
+print all records
+Account #: 1
+Name: david
+Address: 
+home*
+ 
+Account #: 2
+Name: jake
+Address: 
+450343 
+Dole st.*
+ 
+Account #: 34
+Name: mark
+Address: 
+liincon*
+ 
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+ 4
+Please enter the account no
+34
+mark's record has been removed
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+3
+print all records
+Account #: 1
+Name: david
+Address: 
+home*
+ 
+Account #: 2
+Name: jake
+Address: 
+450343 
+Dole st.*
+ 
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+ 4
+Please enter the account no
+1
+david's record was deleted.
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+3
+print all records
+Account #: 2
+Name: jake
+Address: 
+450343 
+Dole st.*
+ 
+
+To add a record please enter (1)
+ To print a record please enter (2)
+ To print all records please enter (3)
+ To delete a record please enter (4)
+ To exit the program please enter (5) 
+ 5
+]0;kobyv@uhx02:~/project1uhx02:/home/k/kobyv/project1% exit
+exit
+
+Script done on Sat 27 Oct 2018 11:39:35 PM HST
